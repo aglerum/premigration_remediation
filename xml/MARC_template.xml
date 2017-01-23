@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marc:collection 
+    xmlns:marc="http://www.loc.gov/MARC21/slim"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+    http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+    <marc:record>
+   <!-- LEADER must match this Regex pattern: [\d ]{5}[\dA-Za-z ]{1}[\dA-Za-z]{1}[\dA-Za-z ]{3}(2| )(2| )[\d ]{5}[\dA-Za-z ]{3}(4500| ) -->
+    <marc:leader>00000cam  2200000   4500</marc:leader>
+    <marc:controlfield tag="001">020000081</marc:controlfield>
+    <marc:datafield tag="245" ind1="0" ind2="0">
+        <marc:subfield code="a">TITLE</marc:subfield> 
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">{{.value}}</marc:subfield>
+    </marc:datafield>
+    <marc:datafield tag="500" ind1=" " ind2=" ">
+        <marc:subfield code="a">{{cells["text"].value}}</marc:subfield>
+        <marc:subfield code="5">{{cells["COLUMN_NAME"].value}}</marc:subfield>      
+    </marc:datafield>
+    </marc:record>
+</marc:collection>
+
+<!-- In OpenRefine -->
+<!-- Prefix -->
+<!--
+    <?xml version="1.0" encoding="UTF-8"?>
+<marc:collection xmlns:marc="http://www.loc.gov/MARC21/slim"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.loc.gov/MARC21/slim
+    http://www.loc.gov/standards/marcxml/schema/MARC21slim.xsd">
+-->
+    
+<!-- Row Template  -->
+<!--
+    <marc:record>
+<marc:leader>00000cam  2200000   4500</marc:leader>
+<marc:controlfield tag="001">{{cells["bib"].value}}</marc:controlfield>
+<marc:datafield tag="245" ind1="0" ind2="0">
+    <subfield code="a">TITLE</marc:subfield> 
+</marc:datafield>
+<marc:datafield tag="{{cells["tag"].value}}" ind1=" " ind2=" ">
+    <marc:subfield code="a">{{cells["text"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FBoU"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FFmFGC"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FJUNF"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FMFIU"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FOFT"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FPeU"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FTaFA"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FTaSU"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FTS"].value}}</marc:subfield>
+    <marc:subfield code="5">{{cells["FU"].value}}</marc:subfield>
+</marc:datafield>
+</marc:record>
+-->
+
+<!-- Row Separator: None -->
+
+<!-- Suffix -->
+<!--
+    </marc:collection>
+-->
+
+   

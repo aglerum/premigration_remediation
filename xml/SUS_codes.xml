@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<institutions>
+    <institution Name = "CRL">
+        <branch>Center for Research Libraries (CRL)</branch>
+        <code>ICRL</code>
+    </institution>
+    <institution Name = "FAMU">
+        <branch>FAMU Library</branch>
+        <code>FTaFA</code>
+    </institution>
+    <institution Name = "FAMU">
+        <branch>FAMU Law Library</branch>
+        <code>FlOrFAM</code>
+    </institution>
+    <institution Name = "FAU">
+        <branch>FAU Library</branch>
+        <code>FBoU</code>
+    </institution>
+    <institution Name = "FGCU">
+        <branch>FGCU Library</branch>
+        <code>FFmFGC</code>
+    </institution>
+    <institution Name = "FIU">
+        <branch>FIU Library</branch>
+        <code>FMFIU</code>
+    </institution>
+    <institution Name = "FIU">
+        <branch>FIU Law Library</branch>
+        <code>FlMiFIUC</code>
+    </institution>
+    <institution Name = "FIU">
+        <branch>FIU Medical Library</branch>
+        <code>FlMiFUM</code>
+    </institution>
+    <institution Name = "FLARE">
+        <branch>FLARE</branch>
+        <code>FlGaFAR</code>
+    </institution>
+    <institution Name = "FPT">
+        <branch>FPT Library</branch>
+        <code>FlLlFPU</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Libraries</branch>
+        <code>FTaSU</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Law Library</branch>
+        <code>FTaSU-L</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Medical Library</branch>
+        <code>FlTaSUM</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Music Library</branch>
+        <code>FTaSU-M</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Ringling Museum</branch>
+        <code>FSRSA</code>
+    </institution>
+    <institution Name = "NCF">
+        <branch>NCF Library</branch>
+        <code>FSsNC</code>
+    </institution>
+    <institution Name = "UCF">
+        <branch>UCF Library</branch>
+        <code>FOFT</code>
+    </institution>
+    <institution Name = "UCF">
+        <branch>UCF Health Sciences Library</branch>
+        <code>FlOrUCM</code>
+    </institution>
+    <institution Name = "UCF">
+        <branch>UCF Solar Energy Center</branch>
+        <code>FCaF</code>
+    </institution>
+    <institution Name = "UF">
+        <branch>UF Library</branch>
+        <code>FU</code>
+    </institution>
+    <institution Name = "UF">
+        <branch>UF Borland Library-Jacksonville Library</branch>
+        <code>FU-J</code>
+    </institution>
+    <institution Name = "UF">
+        <branch>UF Health Science Center Library</branch>
+        <code>FU-HC</code>
+    </institution>
+    <institution Name = "UF">
+        <branch>UF Law Library</branch>
+        <code>FU-L</code>
+    </institution>
+    <institution Name = "UNF">
+        <branch>UNF Library</branch>
+        <code>FJUNF</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF Library</branch>
+        <code>FTS</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF de la Parte Florida MentalL Health Institute Library </branch>
+        <code>FTFM</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF Health Sciences  Library</branch>
+        <code>FTS-M</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF Moffitt Cancer Center</branch>
+        <code>FlTpHLM</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF Sarasota Library</branch>
+        <code>FlSsUSF</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF St. Petersburg  Library</branch>
+        <code>FStS</code>
+    </institution>
+    <institution Name = "SWF">
+        <branch>UWF Library</branch>
+        <code>FPeU</code>
+    </institution>
+</institutions>
