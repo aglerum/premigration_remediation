@@ -9,6 +9,10 @@
         <code>FTaFA</code>
     </institution>
     <institution Name = "FAMU">
+        <branch>FAMU Library</branch>
+        <code>KEEPAM</code>
+    </institution>
+    <institution Name = "FAMU">
         <branch>FAMU Law Library</branch>
         <code>FlOrFAM</code>
     </institution>
@@ -16,13 +20,25 @@
         <branch>FAU Library</branch>
         <code>FBoU</code>
     </institution>
+    <institution Name = "FAU">
+        <branch>FAU Library</branch>
+        <code>KEEPFA</code>
+    </institution>
     <institution Name = "FGCU">
         <branch>FGCU Library</branch>
         <code>FFmFGC</code>
     </institution>
+    <institution Name = "FGCU">
+        <branch>FGCU Library</branch>
+        <code>KEEPGC</code>
+    </institution>
     <institution Name = "FIU">
         <branch>FIU Library</branch>
         <code>FMFIU</code>
+    </institution>
+    <institution Name = "FIU">
+        <branch>FIU Library</branch>
+        <code>KEEPFI</code>
     </institution>
     <institution Name = "FIU">
         <branch>FIU Law Library</branch>
@@ -40,9 +56,17 @@
         <branch>FPT Library</branch>
         <code>FlLlFPU</code>
     </institution>
+    <institution Name = "FPT">
+        <branch>FPT Library</branch>
+        <code>KEEPFP</code>
+    </institution>
     <institution Name = "FSU">
         <branch>FSU Libraries</branch>
         <code>FTaSU</code>
+    </institution>
+    <institution Name = "FSU">
+        <branch>FSU Libraries</branch>
+        <code>KEEPFS</code>
     </institution>
     <institution Name = "FSU">
         <branch>FSU Law Library</branch>
@@ -64,9 +88,17 @@
         <branch>NCF Library</branch>
         <code>FSsNC</code>
     </institution>
+    <institution Name = "NCF">
+        <branch>NCF Library</branch>
+        <code>KEEPNC</code>
+    </institution>
     <institution Name = "UCF">
         <branch>UCF Library</branch>
         <code>FOFT</code>
+    </institution>
+    <institution Name = "UCF">
+        <branch>UCF Library</branch>
+        <code>KEEPCF</code>
     </institution>
     <institution Name = "UCF">
         <branch>UCF Health Sciences Library</branch>
@@ -79,6 +111,10 @@
     <institution Name = "UF">
         <branch>UF Library</branch>
         <code>FU</code>
+    </institution>
+    <institution Name = "UF">
+        <branch>UF Library</branch>
+        <code>KEEPUF</code>
     </institution>
     <institution Name = "UF">
         <branch>UF Borland Library-Jacksonville Library</branch>
@@ -96,9 +132,17 @@
         <branch>UNF Library</branch>
         <code>FJUNF</code>
     </institution>
+    <institution Name = "UNF">
+        <branch>UNF Library</branch>
+        <code>KEEPNF</code>
+    </institution>
     <institution Name = "USF">
         <branch>USF Library</branch>
         <code>FTS</code>
+    </institution>
+    <institution Name = "USF">
+        <branch>USF Library</branch>
+        <code>KEEPSF</code>
     </institution>
     <institution Name = "USF">
         <branch>USF de la Parte Florida MentalL Health Institute Library </branch>
@@ -123,5 +167,9 @@
     <institution Name = "SWF">
         <branch>UWF Library</branch>
         <code>FPeU</code>
+    </institution>
+    <institution Name = "SWF">
+        <branch>UWF Library</branch>
+        <code>KEEPWF</code>
     </institution>
 </institutions>
