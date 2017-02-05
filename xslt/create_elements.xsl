@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
-    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" 
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xd xs"
-    version="2.0">  
-    
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xd xs" version="2.0">
+
     <xd:doc scope="stylesheet">
         <xd:desc>
-            <xd:p><xd:b>Last updated: </xd:b>December 25, 2016</xd:p>
+            <xd:p><xd:b>Last updated: </xd:b>February 5, 2017</xd:p>
             <xd:p><xd:b>Author: </xd:b>Annie Glerum</xd:p>
             <xd:p><xd:b>Organization: </xd:b>Florida State University Libraries</xd:p>
             <xd:p><xd:b>Title: </xd:b>Create Elements</xd:p>
-            <xd:p>Transformation of MARCXML to bibliographic element set.</xd:p>
+            <xd:p>Transformation of MARCXML to a bibliographic element set for the standardization of notes and the identification and re tagging of
+                local data in 500 fields.</xd:p>
             <xd:p>The result of this transformation is edited for pre-migration processing.</xd:p>
         </xd:desc>
     </xd:doc>
@@ -45,22 +44,21 @@
                             <text>
                                 <xsl:value-of select="subfield[@code = 'a']"/>
                             </text>
-                            <codes>
-                                <xsl:for-each select="subfield[@code='5']">
-                                    <xsl:sort select="." order="ascending"/>
-                                    <xsl:variable name="code" select="."/>
-                                    <xsl:variable name="institution">
-                                        <xsl:for-each select=".">
-                                            <xsl:value-of select="$institutions[code=current()]/*[(self::branch)]"/>
-                                        </xsl:for-each>
-                                    </xsl:variable>
-                                    <!-- Element name is created from $5 Subfield code  -->
-                                    <xsl:element name="{$code}">
-                                        <!-- The institution's branch name is the value -->
-                                        <xsl:value-of select="$institution"/>
-                                    </xsl:element>
-                                </xsl:for-each>
-                            </codes>
+                            <xsl:for-each select="subfield[@code = '5']">
+                                <xsl:sort select="." order="ascending"/>
+                                <xsl:variable name="code" select="."/>
+                                <xsl:variable name="institution">
+                                    <xsl:for-each select=".">
+                                        <xsl:value-of select="$institutions[code = current()]/*[(self::branch)]"/>
+                                    </xsl:for-each>
+                                </xsl:variable>
+                                <!-- Element name is created from $5 Subfield code  -->
+                                <xsl:element name="{$code}">
+                                    <!-- The institution's branch name is the value -->
+                                    <xsl:value-of select="$institution"/>
+                                </xsl:element>
+                            </xsl:for-each>
+
                         </field>
                     </xsl:for-each>
                     <!-- 590 field elements -->
@@ -83,12 +81,12 @@
                                 />
                             </text>
                             <codes>
-                                <xsl:for-each select="subfield[@code='5']">
+                                <xsl:for-each select="subfield[@code = '5']">
                                     <xsl:sort select="." order="ascending"/>
                                     <xsl:variable name="code" select="."/>
                                     <xsl:variable name="institution">
                                         <xsl:for-each select=".">
-                                            <xsl:value-of select="$institutions[code=current()]/*[(self::branch)]"/>
+                                            <xsl:value-of select="$institutions[code = current()]/*[(self::branch)]"/>
                                         </xsl:for-each>
                                     </xsl:variable>
                                     <!-- Element name is created from $5 Subfield code  -->
