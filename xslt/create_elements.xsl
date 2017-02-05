@@ -21,6 +21,9 @@
     <!-- Run this program on the MARCXML without namespaces or schema -->
 
     <xsl:template match="/collection">
+        <xsl:variable name="quote">
+            <xsl:text>"</xsl:text>
+        </xsl:variable>
         <records>
             <!-- Selects records that have 500 or 590 fields -->
             <xsl:for-each select="record[datafield[@tag = '500'] or datafield[@tag = '590']]">
@@ -40,6 +43,10 @@
                             <tag>
                                 <xsl:value-of select="@tag"/>
                             </tag>
+                            <!-- Exclude from review if starts with quotes -->
+                            <exclude>
+                                <xsl:value-of select="if (starts-with(subfield[@code = 'a'], $quote)) then 'Yes' else 'NO'"/>
+                            </exclude>
                             <!-- Field text -->
                             <text>
                                 <xsl:value-of select="subfield[@code = 'a']"/>
@@ -58,7 +65,6 @@
                                     <xsl:value-of select="$institution"/>
                                 </xsl:element>
                             </xsl:for-each>
-
                         </field>
                     </xsl:for-each>
                     <!-- 590 field elements -->
@@ -69,6 +75,10 @@
                             <tag>
                                 <xsl:value-of select="@tag"/>
                             </tag>
+                            <!-- Exclude from review if starts with quotes -->
+                            <exclude>
+                                <xsl:value-of select="if (starts-with(subfield[@code = 'a'], $quote)) then 'Yes' else 'NO'"/>
+                            </exclude>
                             <!-- Field text -->
                             <text>
                                 <!-- This conditional adds the institution's prefix to local notes. Duplicate prefixes are deleted during the review for remediation. -->
@@ -80,7 +90,6 @@
                                             $text"
                                 />
                             </text>
-                            <codes>
                                 <xsl:for-each select="subfield[@code = '5']">
                                     <xsl:sort select="." order="ascending"/>
                                     <xsl:variable name="code" select="."/>
@@ -94,8 +103,7 @@
                                         <!-- The institution's branch name is the value -->
                                         <xsl:value-of select="$institution"/>
                                     </xsl:element>
-                                </xsl:for-each>
-                            </codes>
+                                </xsl:for-each>                           
                         </field>
                     </xsl:for-each>
                 </record>
