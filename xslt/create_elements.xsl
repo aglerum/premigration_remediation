@@ -38,6 +38,7 @@
                     -->
                     <!-- 500 field elements -->
                     <xsl:for-each select="datafield[@tag = '500']">
+                        <xsl:variable name="text" select="subfield[@code = 'a']"/>
                         <field>
                             <!-- Field tag -->
                             <tag>
@@ -45,11 +46,11 @@
                             </tag>
                             <!-- Exclude from review if starts with quotes -->
                             <exclude>
-                                <xsl:value-of select="if (starts-with(subfield[@code = 'a'], $quote)) then 'Yes' else 'NO'"/>
+                                <xsl:value-of select="if (starts-with($text, $quote)) then 'Yes' else 'NO'"/>
                             </exclude>
                             <!-- Field text -->
                             <text>
-                                <xsl:value-of select="subfield[@code = 'a']"/>
+                                <xsl:value-of select="$text"/>
                             </text>
                             <xsl:for-each select="subfield[@code = '5']">
                                 <xsl:sort select="." order="ascending"/>
@@ -77,7 +78,7 @@
                             </tag>
                             <!-- Exclude from review if starts with quotes -->
                             <exclude>
-                                <xsl:value-of select="if (starts-with(subfield[@code = 'a'], $quote)) then 'Yes' else 'NO'"/>
+                                <xsl:value-of select="if (starts-with($text, $quote)) then 'Yes' else 'NO'"/>
                             </exclude>
                             <!-- Field text -->
                             <text>
