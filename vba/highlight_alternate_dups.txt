@@ -1,0 +1,33 @@
+Sub Grouping()
+     
+    Dim row As Long
+     
+    Dim lastcell As Long
+     
+    Dim Report As Worksheet
+    Set Report = ActiveSheet
+     
+    Dim bColourFlag As Boolean
+    bColourFlag = True
+     
+     
+    lastcell = Report.Cells(Rows.Count, "A").End(xlUp).row
+     
+    Cells(1).Select
+     
+    For row = 1 To lastcell
+         
+        If Cells(row, 1).Value = Cells(row + 1, 1).Value Then
+            Selection.Resize(Selection.Cells.Count + 1).Select
+        Else
+            If Selection.Cells.Count > 1 Then
+                Selection.Interior.ColorIndex = IIf(bColourFlag, 35, 36)
+                bColourFlag = Not bColourFlag
+                Cells(row + 1, 1).Select
+            Else
+                Cells(row + 1, 1).Select
+            End If
+             
+        End If
+    Next row
+End Sub
